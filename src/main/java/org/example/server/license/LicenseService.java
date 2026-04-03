@@ -4,7 +4,7 @@ import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
 import org.example.server.license.dto.*;
 import org.example.server.license.entity.*;
-import org.example.server.license.repo.*;
+import org.example.server.license.repository.*;
 import org.example.server.license.security.TicketSigner;
 import org.example.server.user.ApplicationUser;
 import org.example.server.user.ApplicationUserRepository;

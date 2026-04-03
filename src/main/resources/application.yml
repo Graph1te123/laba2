@@ -45,7 +45,7 @@ logging:
 jwt:
   secret: ${JWT_SECRET}
   accessExpirationMs: ${JWT_ACCESS_EXPIRATION_MS:900000}
-  refreshExpirationMs: ${JWT_REFRESH_EXPIRATION_MS:604800000}
+  refreshExpirationMs: ${JWT_REFRESH_EXPIRATION_MS:1209600000}
 
 app:
   jwt:
@@ -53,6 +53,13 @@ app:
   ticket:
     ttl-seconds: ${TICKET_TTL_SECONDS:300}
     signing-secret: ${TICKET_SIGNING_SECRET}
+
+signature:
+  key-store-path: classpath:signing.jks
+  key-store-type: JKS
+  key-store-password: ${SIGNATURE_KEYSTORE_PASSWORD}
+  key-alias: ${SIGNATURE_KEY_ALIAS}
+  key-password: ${SIGNATURE_KEY_PASSWORD}
 
 management:
   endpoints:
